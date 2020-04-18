@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{{- $language_code := site.LanguageCode | default "en-us" -}}
+<html lang="{{$language_code}}" {{ if in site.Data.i18n.rtl.rtl $language_code }}dir="rtl"{{end}}>
+
+{{ partial "head" . }}
+<body>
+
+
+	{{ partial "common_js" . }}
+	{{ partial "homepage_js" . }}
+</body>
+</html>
