@@ -1,3 +1,13 @@
 /**
  * Site wide CSS styles.
  */
+
+ :root {
+	 --green: #5C946E;
+	 --medium-green: #79A788;
+	 --light-green: #97BAA2;
+
+	 --black: #2A2D34;
+	 --medium-grey: #4F5050;
+	 --grey: #E3E5E4;
+ }
