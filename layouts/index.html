@@ -4,8 +4,29 @@
 
 {{ partial "head" . }}
 <body>
+	{{ partial "icons" .}}
+	<main>
+		<header id="header">
+			<h1>Alex<br/>Dawson</h1>
 
+			<nav>
+				<svg class="social-icon">
+					<!-- twitter icon -->
+					<use xlinkHref="#github-icon"/>					
+				</svg>
+				<svg class="social-icon">
+					<use xlinkHref="#github-icon"/>					
+				</svg>
+				<svg class="social-icon">
+					<!-- figma icon-->
+					<use xlinkHref="#github-icon"/>					
+				</svg>
+			</nav>
+		</header>
+		<section>
 
+		</section>
+	</main>
 	{{ partial "common_js" . }}
 	{{ partial "homepage_js" . }}
 </body>

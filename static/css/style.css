@@ -11,3 +11,42 @@
 	 --medium-grey: #4F5050;
 	 --grey: #E3E5E4;
  }
+
+ @font-face {
+	 font-family: lora;
+	 src: url(../font/Lora/Lora-VariableFont_wght.ttf);
+ }
+
+ @font-face {
+	font-family: ubuntu-light;
+	src: url(../font/Ubuntu/Ubuntu-Light.ttf);
+}
+
+@font-face {
+	font-family: ubuntu-medium;
+	src: url(../font/Ubuntu/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+	font-family: ubuntu-regular;
+	src: url(../font/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+	font-family: ubuntu-bold;
+	src: url(../font/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: var(--grey);
+}
