@@ -4,41 +4,44 @@
 
 {{ partial "head" . }}
 <body>
-	<main>
-		<header id="header">
-			<span class="header-title">Alex<br/>Dawson</span>
+	<header id="header">
+		<span class="header-title">Alex<br/>Dawson</span>
 
-			<div class="lead-container">
-				<span class="header-lead">Full Stack Developer</span>
-				<nav class="social-icons">
-					{{ if ne $.Site.Params.twitterProfile ""  }}
-					<a href="{{ $.Site.Params.twitterProfile }}" class="social-link">
-						<svg viewBox="0 0 24 24" class="social-link-icon">
-							<use href="{{"icons/icons.svg" | absURL}}#twitter"/>
-						</svg>
-					</a>
-					{{ end }}
+		<div class="lead-container">
+			<span class="header-lead">Full Stack Developer</span>
+			<nav class="social-icons">
+				{{ if ne $.Site.Params.twitterProfile ""  }}
+				<a href="{{ $.Site.Params.twitterProfile }}" class="social-link">
+					<svg viewBox="0 0 24 24" class="social-link-icon">
+						<use href="{{"icons/icons.svg" | absURL}}#twitter"/>
+					</svg>
+				</a>
+				{{ end }}
 
-					{{ if ne $.Site.Params.githubProfile "" }}
-					<a href="{{ $.Site.Params.githubProfile }}" class="social-link">
-						<svg viewBox="0 0 24 24" class="social-link-icon">
-							<use href="{{"icons/icons.svg" | absURL}}#github"/>
-						</svg>
-					</a>
-					{{ end }}
+				{{ if ne $.Site.Params.githubProfile "" }}
+				<a href="{{ $.Site.Params.githubProfile }}" class="social-link">
+					<svg viewBox="0 0 24 24" class="social-link-icon">
+						<use href="{{"icons/icons.svg" | absURL}}#github"/>
+					</svg>
+				</a>
+				{{ end }}
 
-					{{ if ne $.Site.Params.figmaProfile "" }}
-					<a href="{{ $.Site.Params.figmaProfile }}" class="social-link">
-						<svg viewBox="0 0 24 24" class="social-link-icon">
-							<use href="{{"icons/icons.svg" | absURL}}#figma"/>
-						</svg>
-					</a>
-					{{ end }}
-				</nav>
-			</div>
-			<hr class="header-rule"/>
-		</header>
-		<section>
+				{{ if ne $.Site.Params.figmaProfile "" }}
+				<a href="{{ $.Site.Params.figmaProfile }}" class="social-link">
+					<svg viewBox="0 0 24 24" class="social-link-icon">
+						<use href="{{"icons/icons.svg" | absURL}}#figma"/>
+					</svg>
+				</a>
+				{{ end }}
+			</nav>
+		</div>
+		<hr class="header-rule"/>
+	</header>
+	<main id="project-post-wrapper">
+		<section id="projects">
+
+		</section>
+		<section id="posts">
 
 		</section>
 	</main>
