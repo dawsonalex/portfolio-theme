@@ -5,7 +5,7 @@
 {{ partial "head" . }}
 <body>
 	<header id="header">
-		<span class="header-title">Alex<br/>Dawson</span>
+		<h1 class="header-title">Alex<br/>Dawson</h1>
 
 		<div class="lead-container">
 			<span class="header-lead">Full Stack Developer</span>
@@ -39,21 +39,31 @@
 	</header>
 	<main id="project-post-wrapper">
 		<section id="projects">
-			<a href="#" class="section-title">
-				Projects
-				<svg viewBox="0 0 24 24">
-					<use href="{{"icons/icons.svg" | absURL}}#external-link"/>
-				</svg>
-			</a>
-		</section>
-		<section id="posts">
-			<a href="#" class="section-title">
-				Posts
-				<svg viewBox="0 0 24 24">
-					<use href="{{"icons/icons.svg" | absURL}}#internal-link"/>
-				</svg>
-			</a>
+			<h2 class="section-title">Projects</h2>
 
+			<div class="project-wrapper">
+				<h3 class="article-title">image-server</h3>
+				<p>A REST API and file server for sending images.</p>
+			</div>
+
+			<div class="project-wrapper">
+				<h3 class="article-title">image-server</h3>
+				<p>A REST API and file server for sending images.</p>
+			</div>
+
+			<div class="project-wrapper">
+				<h3 class="article-title">image-server</h3>
+				<p>A REST API and file server for sending images.</p>
+			</div>
+
+			<div class="project-wrapper">
+				<h3 class="article-title">image-server</h3>
+				<p>A REST API and file server for sending images.</p>
+			</div>
+		</section>
+
+		<section id="posts">
+			<h2 class="section-title">Posts</h2>
 		</section>
 	</main>
 	{{ partial "common_js" . }}

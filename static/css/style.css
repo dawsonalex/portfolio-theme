@@ -60,12 +60,22 @@ body {
 	padding: 10%;
 }
 
+p {
+	font-family: 'lora', monospace, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 160%;
+}
+
 .header-title {
 	font-family: 'ubuntu-bold', monospace, sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 64px;
 	line-height: 74px;
+
+	margin: 0;
 	
 	display: block;
 	color: var(--black);
@@ -94,10 +104,15 @@ body {
 	flex-shrink: 0;
 }
 
+.icon {
+	stroke-width: 1.5px;
+}
+
 .social-link-icon {
 	display: inline-block;
 	width: 27px;
 	color: var(--green);
+	stroke-width: 1.5;
 }
 
 a.social-link:link,
@@ -106,6 +121,7 @@ a.social-link:visited {
 	width: 27px;
 	height: 27px;
 	text-decoration: none;
+	margin: 0 4px;
 }
 
 .header-rule {
@@ -123,6 +139,21 @@ main#project-post-wrapper {
 	padding-top: 2rem;
 }
 
+.article-title {
+	display: inline-block;
+
+	font-family: 'ubuntu-bold', monospace, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	line-height: 39%;
+
+	margin-bottom: 0;
+
+	color: var(--black);
+
+}
+
 .section-title {
 	font-family: 'ubuntu-light', monospace, sans-serif;
 	font-style: normal;
@@ -130,28 +161,23 @@ main#project-post-wrapper {
 	font-size: 40px;
 	line-height: 51%;
 
-	text-decoration: none;
+	flex: 100%;
 
 	color: var(--medium-grey);
 }
 
-.section-title > svg {
-	width: 1em;
-	height: 1em;
-	vertical-align: text-bottom;
-	stroke-opacity: 0.5;
-	transition: all 0.1s ease-in;
-}
-.section-title:hover > svg {
-	stroke-opacity: 1;
-}
-
 section#projects {
 	flex: 1 0 50%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 section#posts {
 	flex: 1 0 50%;
+}
+
+section#projects > .project-wrapper {
+	flex: 50%;
 }
 
 @media screen and (max-width: 576px) {
@@ -166,5 +192,9 @@ section#posts {
 	
 	section#posts {
 		flex: 1 0 100%;
+	}
+
+	section#projects > .project-wrapper {
+		flex: 100%;
 	}
 }
