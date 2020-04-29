@@ -167,19 +167,22 @@ main#project-post-wrapper {
 }
 
 section#projects {
-	flex: 1 0 50%;
+	flex: 1 0 calc((100% / 12) * 5); /* take up 5 of screen columns */
 	display: flex;
 	flex-wrap: wrap;
 }
 
 section#posts {
-	flex: 1 0 50%;
+	flex: 1 0 calc((100% / 12) * 5); /* take up 5 of screen columns */
 }
 
 section#projects > .project-wrapper {
 	flex: 50%;
 }
 
+#section-seperator {
+	flex-basis: calc((100% / 12) * 2);
+}
 @media screen and (max-width: 576px) {
 	.header-lead {
 		flex-basis: 100%;
