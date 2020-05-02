@@ -4,12 +4,12 @@
 
 {{ partial "head" . }}
 <body>
-	<header id="header">
-		<h1 class="header-title">Alex<br/>Dawson</h1>
+	<header>
+		<div id="brand-container">
+			<h1 class="header-title">Alex<br/>Dawson</h1>
 
-		<div class="lead-container">
 			<span class="header-lead">Full Stack Developer</span>
-			<nav class="social-icons">
+			<nav>
 				{{ if ne $.Site.Params.twitterProfile ""  }}
 				<a href="{{ $.Site.Params.twitterProfile }}" class="social-link">
 					<svg viewBox="0 0 24 24" class="social-link-icon">
@@ -35,9 +35,21 @@
 				{{ end }}
 			</nav>
 		</div>
-		<hr class="header-rule"/>
+		<section id="intro-lead">
+			<svg class="bracket">
+				<use href="{{"svg/brackets.svg" | absURL}}#open-bracket"/>
+			</svg>
+
+			<p id="intro">
+				Alex Dawson is a software engineer based in Nottinghamshire, UK. In time, he wants to try his hand at everything related to development, but right now he’s working with Java, and Oracle databases.					
+			</p>
+
+			<svg class="bracket">
+				<use href="{{"svg/brackets.svg" | absURL}}#close-bracket"/>
+			</svg>
+		</section>
 	</header>
-	<main id="project-post-wrapper">
+	<main>
 		<section id="projects">
 			<h2 class="section-title">Projects</h2>
 
@@ -61,8 +73,6 @@
 				<p>A REST API and file server for sending images.</p>
 			</div>
 		</section>
-		
-		<object id="section-seperator" data="{{"svg/wiggle.svg" | absURL}}" type="image/svg+xml"></object>
 
 		<section id="posts">
 			<h2 class="section-title">Posts</h2>

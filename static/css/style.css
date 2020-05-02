@@ -46,18 +46,11 @@
 	box-sizing: border-box;
 }
 
-html {
-	width: 100%;
-	height: 100%;
-}
-
 body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	background: var(--grey);
-
-	padding: 10%;
 }
 
 p {
@@ -67,6 +60,18 @@ p {
 	font-size: 20px;
 	line-height: 160%;
 }
+
+header {
+	padding: 4rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
 
 .header-title {
 	font-family: 'ubuntu-bold', monospace, sans-serif;
@@ -88,15 +93,28 @@ p {
 	font-size: 27px;
 	line-height: 140%;
 
-	flex-shrink: 0;
 	color: var(--black);
 }
 
-.lead-container {
+#brand-container {
+	flex-shrink: 0;
+}
+
+section#intro-lead {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
+	margin-left: 2rem;
+	max-width: 800px;
+}
+
+section#intro-lead p {
+	text-align: center;
+}
+
+.bracket {
+	width: 5%;
+	min-width: 39px;
+	flex: 0 0 5%;
 }
 
 .social-icons {
@@ -124,21 +142,6 @@ a.social-link:visited {
 	margin: 0 4px;
 }
 
-.header-rule {
-	width: 100%;
-	height: 2px;
-	background-color: var(--green);
-	border: none;
-}
-
-main#project-post-wrapper {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-
-	padding-top: 2rem;
-}
-
 .article-title {
 	display: inline-block;
 
@@ -161,43 +164,13 @@ main#project-post-wrapper {
 	font-size: 40px;
 	line-height: 51%;
 
-	flex: 100%;
-
+	border-bottom: 1px solid var(--green);
 	color: var(--medium-grey);
 }
 
-section#projects {
-	flex: 1 0 calc((100% / 12) * 5); /* take up 5 of screen columns */
-	display: flex;
-	flex-wrap: wrap;
-}
-
-section#posts {
-	flex: 1 0 calc((100% / 12) * 5); /* take up 5 of screen columns */
-}
-
-section#projects > .project-wrapper {
-	flex: 50%;
-}
-
-#section-seperator {
-	flex-basis: calc((100% / 12) * 2);
-}
 @media screen and (max-width: 576px) {
-	.header-lead {
-		flex-basis: 100%;
-	}
-
-	section#projects {
-		flex: 1 0 100%;
-		margin-bottom: 1rem;
-	}
-	
-	section#posts {
-		flex: 1 0 100%;
-	}
-
-	section#projects > .project-wrapper {
-		flex: 100%;
+	header {
+		padding: 2rem;
+		flex-wrap: wrap;
 	}
 }
