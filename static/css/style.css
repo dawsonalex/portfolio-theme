@@ -53,18 +53,77 @@ body {
 	background: var(--grey);
 }
 
+h1 {
+	font-family: 'ubuntu-bold', monospace, sans-serif;
+	font-size: 64px;
+	line-height: 74px;
+	color: var(--black);
+}
+
+h1.medium {
+	font-family: 'ubuntu-medium', monospace, sans-serif;
+}
+
+h2 {
+	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-size: 42px;
+	line-height: 48px;
+	font-style: normal;
+	font-weight: normal;
+	color: var(--black);
+}
+
+h2.light {
+	font-family: 'ubuntu-light', monospace, sans-serif;
+}
+
+h3 {
+	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-size: 26px;
+	line-height: 40px;
+	color: var(--black);
+}
+
+h4 {
+	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: var(--black);
+}
+
+.post-lead {
+	font-family: 'ubuntu-regular', monospace, sans-serif;
+	font-size: 27px;
+	line-height: 35px;
+	color: var(--black);
+}
+
+a {
+	font-family: 'lora', monospace, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--black);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 p {
 	font-family: 'lora', monospace, sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px;
-	line-height: 160%;
+	font-size: 18px;
+	line-height: 1.3em;
+	color: var(--black);
 }
 
 header {
 	padding: 4rem;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 main {
@@ -100,15 +159,88 @@ main {
 	flex-shrink: 0;
 }
 
-section#intro-lead {
+#brand-container h1 {
+	margin: 0;
+}
+
+#intro-lead {
 	display: flex;
 	align-items: center;
 	margin-left: 2rem;
 	max-width: 800px;
 }
 
-section#intro-lead p {
+#intro {
 	text-align: center;
+
+	font-family: 'lora', monospace, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 1.5em;
+}
+
+#posts {
+	margin-bottom: 4rem;
+}
+
+#projects > h2,
+#posts > h2 {
+	color: var(--medium-grey);
+	border-bottom: solid 2px var(--medium-green);
+	margin: 0;
+}
+
+.project {
+	margin-bottom: 2rem;
+}
+
+.project > h2,
+.post > h2 {
+	margin-top: 1rem;
+	margin-bottom: .25rem;
+	font-size: 36px;
+	line-height: 42px;
+}
+
+.project > p,
+.post > p {
+	margin: 0;
+	margin-bottom: .5rem;
+}
+
+.post-length-label {
+	margin-right: 1.5rem;
+	color: var(--medium-grey);
+}
+
+.lang-id {
+	color: var(--medium-grey);
+}
+
+.lang-id::before {
+	content: '';
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-right: .75rem;
+}
+
+.golang::before {
+	background: #00ADD8;
+}
+
+.javascript::before {
+	background: #F1E05A;
+}
+
+.arduino::before {
+	background: #EDEDED;
+}
+
+.cplusplus::before {
+	background: #F34B7D;
 }
 
 .bracket {
@@ -157,20 +289,17 @@ a.social-link:visited {
 
 }
 
-.section-title {
-	font-family: 'ubuntu-light', monospace, sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 40px;
-	line-height: 51%;
-
-	border-bottom: 1px solid var(--green);
-	color: var(--medium-grey);
-}
-
 @media screen and (max-width: 576px) {
 	header {
 		padding: 2rem;
 		flex-wrap: wrap;
+	}
+
+	main {
+		padding: 0 2rem;
+	}
+
+	#intro-lead {
+		margin: 0;
 	}
 }

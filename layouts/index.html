@@ -6,7 +6,7 @@
 <body>
 	<header>
 		<div id="brand-container">
-			<h1 class="header-title">Alex<br/>Dawson</h1>
+			<h1>Alex<br/>Dawson</h1>
 
 			<span class="header-lead">Full Stack Developer</span>
 			<nav>
@@ -50,32 +50,56 @@
 		</section>
 	</header>
 	<main>
-		<section id="projects">
-			<h2 class="section-title">Projects</h2>
+		<section id="posts">
+			<h2 class="light">Posts</h2>
 
-			<div class="project-wrapper">
-				<h3 class="article-title">image-server</h3>
-				<p>A REST API and file server for sending images.</p>
+			<div class="post">
+				<h2>Making my portfolio in Figma</h2>
+				<p>Some notes on how I designed my portfolio using Figma, and how I developed and deployed it.</p>
+				<span class="post-length-label">5 min read</span><a href="#">Read More</a>
 			</div>
 
-			<div class="project-wrapper">
-				<h3 class="article-title">image-server</h3>
-				<p>A REST API and file server for sending images.</p>
-			</div>
-
-			<div class="project-wrapper">
-				<h3 class="article-title">image-server</h3>
-				<p>A REST API and file server for sending images.</p>
-			</div>
-
-			<div class="project-wrapper">
-				<h3 class="article-title">image-server</h3>
-				<p>A REST API and file server for sending images.</p>
+			<div class="post">
+				<h2>Learning Golang</h2>
+				<p>Developing a RESTful image server using Golang.</p>
+				<span class="post-length-label">10 min read</span><a href="#">Read More</a>
 			</div>
 		</section>
 
-		<section id="posts">
-			<h2 class="section-title">Posts</h2>
+		<section id="projects">
+			<h2 class="light">Projects</h2>
+
+			<div class="project">
+				<h2>image-server</h2>
+				<p>A REST API and file server for sending images.</p>
+				<div>
+					<div class="lang-id golang">Go</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<h2>polymer-flip-card</h2>
+				<p>A Lit-Element component based on code-it notes by Dan Harding.</p>
+				<div>
+					<div class="lang-id javascript">JavaScript</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<h2>image-server</h2>
+				<p>A simple version of pong written for the arduino using the TVout library.</p>
+				<div>
+					<div class="lang-id arduino">Arduino</div>
+				</div>
+			</div>
+
+			<div class="project">
+				<h2>sudoku_solver</h2>
+				<p>A visual C++ implementation of sudoku solver that uses the naked single algorithm.</p>
+				<div>
+					<div class="lang-id cplusplus">C++</div>
+				</div>
+			</div>
 		</section>
 	</main>
 	{{ partial "common_js" . }}
