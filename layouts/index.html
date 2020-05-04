@@ -9,7 +9,7 @@
 			<h1>Alex<br/>Dawson</h1>
 
 			<span class="header-lead">Full Stack Developer</span>
-			<nav>
+			<nav id="social-nav">
 				{{ if ne $.Site.Params.twitterProfile ""  }}
 				<a href="{{ $.Site.Params.twitterProfile }}" class="social-link">
 					<svg viewBox="0 0 24 24" class="social-link-icon">
@@ -36,15 +36,21 @@
 			</nav>
 		</div>
 		<section id="intro-lead">
-			<svg class="bracket">
+			<svg viewBox="0 0 39 141" class="bracket">
 				<use href="{{"svg/brackets.svg" | absURL}}#open-bracket"/>
+			</svg>
+			<svg viewBox="0 0 141 39" class="bracket-horizontal">
+				<use href="{{"svg/brackets.svg" | absURL}}#open-bracket-horizontal"/>
 			</svg>
 
 			<p id="intro">
 				Alex Dawson is a software engineer based in Nottinghamshire, UK. In time, he wants to try his hand at everything related to development, but right now he’s working with Java, and Oracle databases.					
 			</p>
 
-			<svg class="bracket">
+			<svg viewBox="0 0 141 39" class="bracket-horizontal">
+				<use href="{{"svg/brackets.svg" | absURL}}#close-bracket-horizontal"/>
+			</svg>
+			<svg viewBox="0 0 39 141" class="bracket">
 				<use href="{{"svg/brackets.svg" | absURL}}#close-bracket"/>
 			</svg>
 		</section>
@@ -72,33 +78,41 @@
 			<div class="project">
 				<h2>image-server</h2>
 				<p>A REST API and file server for sending images.</p>
-				<div>
-					<div class="lang-id golang">Go</div>
-				</div>
+				<span class="lang-id golang">Go</span>
+				<ul class="project-links">
+					<li><a href="#">Code</a></li>
+					<li><a href="#">Demo</a></li>
+				</ul>
 			</div>
 
 			<div class="project">
 				<h2>polymer-flip-card</h2>
 				<p>A Lit-Element component based on code-it notes by Dan Harding.</p>
-				<div>
-					<div class="lang-id javascript">JavaScript</div>
-				</div>
+				<span class="lang-id javascript">JavaScript</span>
+				<ul class="project-links">
+					<li><a href="#">Code</a></li>
+					<li><a href="#">Demo</a></li>
+				</ul>
 			</div>
 
 			<div class="project">
-				<h2>image-server</h2>
+				<h2>arduino_pong</h2>
 				<p>A simple version of pong written for the arduino using the TVout library.</p>
-				<div>
-					<div class="lang-id arduino">Arduino</div>
-				</div>
+				<span class="lang-id arduino">Arduino</span>
+				<ul class="project-links">
+					<li><a href="#">Code</a></li>
+					<li><a href="#">Demo</a></li>
+				</ul>
 			</div>
 
 			<div class="project">
 				<h2>sudoku_solver</h2>
 				<p>A visual C++ implementation of sudoku solver that uses the naked single algorithm.</p>
-				<div>
-					<div class="lang-id cplusplus">C++</div>
-				</div>
+				<span class="lang-id cplusplus">C++</span>
+				<ul class="project-links">
+					<li><a href="#">Code</a></li>
+					<li><a href="#">Demo</a></li>
+				</ul>
 			</div>
 		</section>
 	</main>
