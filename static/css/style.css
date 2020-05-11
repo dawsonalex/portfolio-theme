@@ -7,22 +7,26 @@
  * --large-device-breakpoint: 992px;
  */
 
- :root {
-	 --green: rgb(92, 147, 110);
-	 --medium-green: rgb(121, 167, 136);
-	 --light-green: rgb(151, 186, 162);
+/* || root styles */
 
-	 --black: rgb(62, 63, 63);
-	 --medium-grey: rgb(79, 80, 80);
-	 --grey: rgb(227, 229, 228);
- }
+:root {
+	--green: rgb(92, 147, 110);
+	--medium-green: rgb(121, 167, 136);
+	--light-green: rgb(151, 186, 162);
 
- @font-face {
-	 font-family: lora;
-	 src: url(../font/Lora/Lora-VariableFont_wght.ttf);
- }
+	--black: rgb(62, 63, 63);
+	--medium-grey: rgb(79, 80, 80);
+	--grey: rgb(227, 229, 228);
+}
 
- @font-face {
+/* || font faces */
+
+@font-face {
+	font-family: lora;
+	src: url(../font/Lora/Lora-VariableFont_wght.ttf);
+}
+
+@font-face {
 	font-family: ubuntu-light;
 	src: url(../font/Ubuntu/Ubuntu-Light.ttf);
 }
@@ -41,6 +45,8 @@
 	font-family: ubuntu-bold;
 	src: url(../font/Ubuntu/Ubuntu-Bold.ttf);
 }
+
+/* || base styles */
 
 * {
 	box-sizing: border-box;
@@ -119,14 +125,14 @@ p {
 	color: var(--black);
 }
 
-header {
+.homepage-header {
 	padding: 2rem;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
-#social-nav {
+.social-nav {
 	margin-top: .25rem;
 }
 
@@ -160,15 +166,15 @@ main {
 	color: var(--black);
 }
 
-#brand-container {
+.brand-container {
 	flex-shrink: 0;
 }
 
-#brand-container h1 {
+.brand-container h1 {
 	margin: 0;
 }
 
-#intro-lead {
+.intro {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -178,7 +184,7 @@ main {
 	margin-top: 1rem;
 }
 
-#intro {
+.intro-text {
 	text-align: center;
 
 	font-family: 'lora', monospace, sans-serif;
@@ -325,7 +331,7 @@ a.social-link:visited {
 }
 
 @media screen and (min-width: 576px) { 
-	header {
+	.homepage-header {
 		padding: 4rem;
 	}
 
@@ -333,12 +339,12 @@ a.social-link:visited {
 		padding: 0 4rem;
 	}
 
-	#intro-lead {
+	.intro {
 		margin:0;
 		margin-left: 2rem;
 	}
 
-	#intro {
+	.intro-text {
 		flex: 1;
 	}
 
