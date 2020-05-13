@@ -7,15 +7,46 @@
  * --large-device-breakpoint: 992px;
  */
 
- :root {
-	 --green: rgb(92, 147, 110);
-	 --medium-green: rgb(121, 167, 136);
-	 --light-green: rgb(151, 186, 162);
+html {
+	--green: #5C946E;
+	--medium-green:	#79A788;
+	--light-green: #97BAA2;
+	--grey: #e3e5e4;
+	--medium-grey: #4F5050;
+	--black: #3E3F3F;
 
-	 --black: rgb(62, 63, 63);
-	 --medium-grey: rgb(79, 80, 80);
-	 --grey: rgb(227, 229, 228);
- }
+	--font-family: var(--black);
+	--font-family-secondary: var(--medium-grey);
+	--color-background: var(--grey);
+
+	--color-primary: var(--green);
+	--color-primary-medium: var(--medium-green);
+	--color-primary-light: var(--light-green);
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--font-family: var(--grey);
+		--font-family-secondary: var(--grey); 
+		--color-background: var(--medium-grey);
+
+		--color-primary: var(--light-green);
+		--color-primary-medium: var(--light-green);
+		--color-primary-light: var(--light-green);
+	}
+}
+
+html[data-theme='dark'] {
+		--font-family: var(--grey);
+		--font-family-secondary: var(--grey); 
+		--color-background: var(--medium-grey);
+
+		--primary-color: var(--light-green);
+		--primary-medium: var(--light-green);
+		--primary-light: var(--light-green);
+}
+
+
 
  @font-face {
 	 font-family: lora;
@@ -50,14 +81,14 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	background: var(--grey);
+	background: var(--color-background);
 }
 
 h1 {
 	font-family: 'ubuntu-bold', monospace, sans-serif;
 	font-size: 64px;
 	line-height: 74px;
-	color: var(--black);
+	color: var(--font-family);
 }
 
 h1.medium {
@@ -70,7 +101,7 @@ h2 {
 	line-height: 48px;
 	font-style: normal;
 	font-weight: normal;
-	color: var(--black);
+	color: var(--font-family);
 }
 
 h2.light {
@@ -81,28 +112,28 @@ h3 {
 	font-family: 'ubuntu-medium', monospace, sans-serif;
 	font-size: 26px;
 	line-height: 40px;
-	color: var(--black);
+	color: var(--font-family);
 }
 
 h4 {
 	font-family: 'ubuntu-medium', monospace, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
-	color: var(--black);
+	color: var(--font-family);
 }
 
 .post-lead {
 	font-family: 'ubuntu-regular', monospace, sans-serif;
 	font-size: 27px;
 	line-height: 35px;
-	color: var(--black);
+	color: var(--font-family);
 }
 
 a {
 	font-family: 'lora', monospace, sans-serif;
 	font-size: 16px;
 	line-height: 22px;
-	color: var(--black);
+	color: var(--font-family);
 	text-decoration: none;
 }
 
@@ -116,7 +147,7 @@ p {
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 1.3em;
-	color: var(--black);
+	color: var(--font-family);
 }
 
 header {
@@ -147,7 +178,7 @@ main {
 	margin: 0;
 	
 	display: block;
-	color: var(--black);
+	color: var(--font-family);
 }
 
 .header-lead {
@@ -157,7 +188,7 @@ main {
 	font-size: 27px;
 	line-height: 140%;
 
-	color: var(--black);
+	color: var(--font-family);
 }
 
 #brand-container {
@@ -196,8 +227,8 @@ main {
 
 #projects > h2,
 #posts > h2 {
-	color: var(--medium-grey);
-	border-bottom: solid 2px var(--medium-green);
+	color: var(--font-family-secondary);
+	border-bottom: solid 2px var(--color-primary-medium);
 	margin: 0;
 }
 
@@ -221,7 +252,7 @@ main {
 
 .post-length-label {
 	margin-right: 1.5rem;
-	color: var(--medium-grey);
+	color: var(--font-family-secondary);
 }
 
 .project > .lang-id {
@@ -229,7 +260,7 @@ main {
 }
 
 .lang-id {
-	color: var(--medium-grey);
+	color: var(--font-family-secondary);
 }
 
 .lang-id::before {
@@ -265,7 +296,7 @@ main {
 
 .project-links > li {
 	font-family: 'lora', monospace, sans-serif;
-	color: var(--black);
+	color: var(--font-family);
 	display: inline;
 }
 
@@ -275,10 +306,12 @@ main {
 }
 
 .bracket {
+	color: var(--font-family);
 	display: none;
 }
 
 .bracket-horizontal {
+	color: var(--font-family);
 	display: block;
 	height: 5%;
 	min-height: 39px;
@@ -296,7 +329,7 @@ main {
 .social-link-icon {
 	display: inline-block;
 	width: 27px;
-	color: var(--green);
+	color: var(--color-primary);
 	stroke-width: 1.5;
 }
 
@@ -320,7 +353,7 @@ a.social-link:visited {
 
 	margin-bottom: 0;
 
-	color: var(--black);
+	color: var(--font-family);
 
 }
 
