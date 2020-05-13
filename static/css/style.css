@@ -73,6 +73,8 @@ html[data-theme='dark'] {
 	src: url(../font/Ubuntu/Ubuntu-Bold.ttf);
 }
 
+/* || base styles */
+
 * {
 	box-sizing: border-box;
 }
@@ -150,14 +152,14 @@ p {
 	color: var(--font-family);
 }
 
-header {
+.homepage-header {
 	padding: 2rem;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
-#social-nav {
+.social-nav {
 	margin-top: .25rem;
 }
 
@@ -191,15 +193,15 @@ main {
 	color: var(--font-family);
 }
 
-#brand-container {
+.brand-container {
 	flex-shrink: 0;
 }
 
-#brand-container h1 {
+.brand-container h1 {
 	margin: 0;
 }
 
-#intro-lead {
+.intro {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -209,7 +211,7 @@ main {
 	margin-top: 1rem;
 }
 
-#intro {
+.intro-text {
 	text-align: center;
 
 	font-family: 'lora', monospace, sans-serif;
@@ -358,7 +360,7 @@ a.social-link:visited {
 }
 
 @media screen and (min-width: 576px) { 
-	header {
+	.homepage-header {
 		padding: 4rem;
 	}
 
@@ -366,12 +368,12 @@ a.social-link:visited {
 		padding: 0 4rem;
 	}
 
-	#intro-lead {
+	.intro {
 		margin:0;
 		margin-left: 2rem;
 	}
 
-	#intro {
+	.intro-text {
 		flex: 1;
 	}
 
