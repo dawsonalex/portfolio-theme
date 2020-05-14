@@ -7,6 +7,8 @@
  * --large-device-breakpoint: 992px;
  */
 
+ /** || Variables */
+
 html {
 	--green: #5C946E;
 	--medium-green:	#79A788;
@@ -46,7 +48,7 @@ html[data-theme='dark'] {
 		--primary-light: var(--light-green);
 }
 
-
+/** || Font Family */
 
  @font-face {
 	 font-family: lora;
@@ -163,7 +165,7 @@ p {
 	margin-top: .25rem;
 }
 
-main {
+.center-column {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 0 2rem;
@@ -358,6 +360,8 @@ a.social-link:visited {
 	color: var(--font-family);
 
 }
+
+/** || Media breakpoints */
 
 @media screen and (min-width: 576px) { 
 	.homepage-header {

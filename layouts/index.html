@@ -55,21 +55,12 @@
 			</svg>
 		</section>
 	</header>
-	<main>
+	<main class="center-column">
 		<section id="posts">
 			<h2 class="light">Posts</h2>
-
-			<div class="post">
-				<h2>Making my portfolio in Figma</h2>
-				<p>Some notes on how I designed my portfolio using Figma, and how I developed and deployed it.</p>
-				<span class="post-length-label">5 min read</span><a href="#">Read More</a>
-			</div>
-
-			<div class="post">
-				<h2>Learning Golang</h2>
-				<p>Developing a RESTful image server using Golang.</p>
-				<span class="post-length-label">10 min read</span><a href="#">Read More</a>
-			</div>
+			{{ range first 10 .Site.RegularPages }}
+				{{ .Render "li" }}
+			{{ end }}
 		</section>
 
 		<section id="projects">

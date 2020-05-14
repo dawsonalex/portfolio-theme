@@ -1,0 +1,5 @@
+<div class="post">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Summary}}</p>
+    <span class="post-length-label">{{ partial "GetReadLength" . }} min read</span><a href="{{ .Permalink }}">Read More</a>
+</div>
