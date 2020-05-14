@@ -229,8 +229,20 @@ p {
 	margin-bottom: 4rem;
 }
 
-#projects > h2,
-#posts > h2 {
+.empty-placeholder {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin: 3rem 0;
+	font-family: 'lora', monospace, sans-serif;
+
+	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-size: 26px;
+	line-height: 40px;
+	color: var(--font-family);
+}
+
+.section-heading {
 	color: var(--font-family-secondary);
 	border-bottom: solid 2px var(--color-primary-medium);
 	margin: 0;

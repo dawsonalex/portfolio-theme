@@ -56,16 +56,11 @@
 		</section>
 	</header>
 	<main class="center-column">
-		<section id="posts">
-			<h2 class="light">Posts</h2>
-			{{ range first 10 .Site.RegularPages }}
-				{{ .Render "li" }}
-			{{ end }}
-		</section>
-
+		<h2 class="light section-heading">Posts</h2>
+		<section id="posts">{{ partial "RenderFirstTenPosts" .}}</section>
+		
+		<h2 class="light section-heading">Projects</h2>
 		<section id="projects">
-			<h2 class="light">Projects</h2>
-
 			<div class="project">
 				<h2>image-server</h2>
 				<p>A REST API and file server for sending images.</p>
