@@ -57,50 +57,10 @@
 	</header>
 	<main class="center-column">
 		<h2 class="light section-heading">Posts</h2>
-		<section id="posts">{{ partial "RenderFirstTenPosts" .}}</section>
+		<section id="posts">{{ partial "RenderFirstTenPosts" . }}</section>
 		
 		<h2 class="light section-heading">Projects</h2>
-		<section id="projects">
-			<div class="project">
-				<h2>image-server</h2>
-				<p>A REST API and file server for sending images.</p>
-				<span class="lang-id golang">Go</span>
-				<ul class="project-links">
-					<li><a href="#">Code</a></li>
-					<li><a href="#">Demo</a></li>
-				</ul>
-			</div>
-
-			<div class="project">
-				<h2>polymer-flip-card</h2>
-				<p>A Lit-Element component based on code-it notes by Dan Harding.</p>
-				<span class="lang-id javascript">JavaScript</span>
-				<ul class="project-links">
-					<li><a href="#">Code</a></li>
-					<li><a href="#">Demo</a></li>
-				</ul>
-			</div>
-
-			<div class="project">
-				<h2>arduino_pong</h2>
-				<p>A simple version of pong written for the arduino using the TVout library.</p>
-				<span class="lang-id arduino">Arduino</span>
-				<ul class="project-links">
-					<li><a href="#">Code</a></li>
-					<li><a href="#">Demo</a></li>
-				</ul>
-			</div>
-
-			<div class="project">
-				<h2>sudoku_solver</h2>
-				<p>A visual C++ implementation of sudoku solver that uses the naked single algorithm.</p>
-				<span class="lang-id cplusplus">C++</span>
-				<ul class="project-links">
-					<li><a href="#">Code</a></li>
-					<li><a href="#">Demo</a></li>
-				</ul>
-			</div>
-		</section>
+		<section id="projects">{{ partial "RenderTopProjects" . }}</section>
 	</main>
 	{{ partial "common_js" . }}
 	{{ partial "homepage_js" . }}

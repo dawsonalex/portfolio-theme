@@ -271,37 +271,21 @@ p {
 	color: var(--font-family-secondary);
 }
 
-.project > .lang-id {
+.project > .language-label {
 	margin-right: 2rem;
 }
 
-.lang-id {
+.language-text {
 	color: var(--font-family-secondary);
 }
 
-.lang-id::before {
+.language-color {
 	content: '';
 	display: inline-block;
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
 	margin-right: .75rem;
-}
-
-.golang::before {
-	background: #00ADD8;
-}
-
-.javascript::before {
-	background: #F1E05A;
-}
-
-.arduino::before {
-	background: #EDEDED;
-}
-
-.cplusplus::before {
-	background: #F34B7D;
 }
 
 .project-links {

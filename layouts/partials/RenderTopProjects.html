@@ -1,0 +1,11 @@
+{{- /* Fetch and render the last committed repos for a github user */ -}}
+{{ $urlPre := "https://api.github.com" }}
+{{ $repos := getJSON $urlPre (path.Join "/users" .Site.Params.GitHubUser "repos") "?sort=updated" }}
+{{ if gt (len $repos) 0}}
+    {{ range first 3 $repos }}
+        {{ partial "github_repo" .}}
+    {{ end }}
+{{ else }}
+    {{ .Scratch.Set "placeholder" "No Projects to Show :(" }}
+    {{ partial "emptyPlaceHolder" . }}
+{{ end }}
