@@ -1,9 +1,17 @@
 {{- /* Fetch and render the last committed repos for a github user */ -}}
-{{ $urlPre := "https://api.github.com" }}
-{{ $repos := getJSON $urlPre (path.Join "/users" .Site.Params.GitHubUser "repos") "?sort=updated" }}
+{{ $repos }}
+{{ if ne .Site.Params.projectsURL ""}}
+    {{- /* Fetch project data from the URL provided in config. */ -}}
+    {{ $repos = getJSON .Site.Params.projectsURL }}
+    
+{{ else }}
+    {{- /* Use the users dataset or theme default for project data. */ -}}
+    {{ $repos = .Site.Data.projects }}
+{{ end }}
+
 {{ if gt (len $repos) 0}}
     {{ range first 3 $repos }}
-        {{ partial "github_repo" .}}
+        {{ partial "project" .}}
     {{ end }}
 {{ else }}
     {{ .Scratch.Set "placeholder" "No Projects to Show :(" }}
