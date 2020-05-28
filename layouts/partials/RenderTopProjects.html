@@ -1,5 +1,5 @@
 {{- /* Fetch and render the last committed repos for a github user */ -}}
-{{ $repos }}
+{{ $repos := dict "name" "project1" | jsonify }}
 {{ if ne .Site.Params.projectsURL ""}}
     {{- /* Fetch project data from the URL provided in config. */ -}}
     {{ $repos = getJSON .Site.Params.projectsURL }}
