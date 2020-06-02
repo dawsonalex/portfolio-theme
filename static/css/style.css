@@ -266,7 +266,8 @@ p {
 	margin-bottom: .5rem;
 }
 
-.post-length-label {
+.post-length-label,
+.post-date-label {
 	margin-right: 1.5rem;
 	color: var(--font-family-secondary);
 }
