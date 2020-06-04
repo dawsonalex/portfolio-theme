@@ -6,7 +6,7 @@
 			<span class="header-lead">Full Stack Developer</span>
 			<nav class="social-nav">
 				{{ with $.Site.Params.TwitterUser }}
-				<a href="{{ path.Join "https://twitter.com" . }}" class="social-link">
+				<a href="{{ printf "https://twitter.com/%s" . }}" class="social-link">
 					<svg viewBox="0 0 24 24" class="social-link-icon">
 						<use href="{{"icons/icons.svg" | absURL}}#twitter"/>
 					</svg>
@@ -14,7 +14,7 @@
 				{{ end }}
 
 				{{ with $.Site.Params.GitHubUser }}
-				<a href="{{ path.Join "https://github.com" . }}" class="social-link">
+				<a href="{{ printf "https:////github.com" . }}" class="social-link">
 					<svg viewBox="0 0 24 24" class="social-link-icon">
 						<use href="{{"icons/icons.svg" | absURL}}#github"/>
 					</svg>
@@ -22,7 +22,7 @@
 				{{ end }}
 
 				{{ with $.Site.Params.LinkedInUser }}
-				<a href="{{ path.Join "https://linkedin.com/in" . }}" class="social-link">
+				<a href="{{ printf "https:////linkedin.com/in" . }}" class="social-link">
 					<svg viewBox="0 0 24 24" class="social-link-icon">
 						<use href="{{"icons/icons.svg" | absURL}}#linkedin"/>
 					</svg>
