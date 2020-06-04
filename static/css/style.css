@@ -171,6 +171,16 @@ p {
 	padding: 0 2rem;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.http-error-code {
+	font-family: 'lora', monospace, sans-serif;
+	font-size: 320px;
+	font-style: normal;
+	color: var(--font-family-secondary);
+}
 
 .header-title {
 	font-family: 'ubuntu-bold', monospace, sans-serif;
