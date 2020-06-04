@@ -1,0 +1,28 @@
+/**
+ * This stylesheet should only contain font declarations to 
+ * fonts to be preloaded on the page to avoid blocking and FOIT.
+ */
+@font-face {
+    font-family: lora;
+    src: url(../font/Lora/Lora-VariableFont_wght.ttf);
+}
+
+@font-face {
+   font-family: ubuntu-light;
+   src: url(../font/Ubuntu/Ubuntu-Light.ttf);
+}
+
+@font-face {
+   font-family: ubuntu-medium;
+   src: url(../font/Ubuntu/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+   font-family: ubuntu-regular;
+   src: url(../font/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+   font-family: ubuntu-bold;
+   src: url(../font/Ubuntu/Ubuntu-Bold.ttf);
+}
