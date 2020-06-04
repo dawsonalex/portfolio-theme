@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
+{{- $language_code := site.LanguageCode | default "en-us" -}}
+<html lang="{{$language_code}}" {{ if in site.Data.i18n.rtl.rtl $language_code }}dir="rtl"{{end}}>
+    {{ partial "head" . }}
     <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
+    {{- block "main" . -}}{{- end -}}
+    {{ partial "common_js" . }}
     </body>
 </html>

@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-{{- $language_code := site.LanguageCode | default "en-us" -}}
-<html lang="{{$language_code}}" {{ if in site.Data.i18n.rtl.rtl $language_code }}dir="rtl"{{end}}>
-
-{{ partial "head" . }}
-<body>
+{{- define "main" -}}
 	<header class="homepage-header">
 		<div class="brand-container">
 			<h1>Alex<br/>Dawson</h1>
@@ -62,7 +57,4 @@
 		<h2 class="light section-heading">Projects</h2>
 		<section id="projects">{{ partial "RenderTopProjects" . }}</section>
 	</main>
-	{{ partial "common_js" . }}
-	{{ partial "homepage_js" . }}
-</body>
-</html>
+{{- end -}}
