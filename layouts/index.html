@@ -14,7 +14,7 @@
 				{{ end }}
 
 				{{ with $.Site.Params.GitHubUser }}
-				<a href="{{ printf "https:////github.com" . }}" class="social-link">
+				<a href="{{ printf "https://github.com/%s" . }}" class="social-link">
 					<svg viewBox="0 0 24 24" class="social-link-icon">
 						<use href="{{"icons/icons.svg" | absURL}}#github"/>
 					</svg>
@@ -22,7 +22,7 @@
 				{{ end }}
 
 				{{ with $.Site.Params.LinkedInUser }}
-				<a href="{{ printf "https:////linkedin.com/in" . }}" class="social-link">
+				<a href="{{ printf "https://linkedin.com/in/%s" . }}" class="social-link">
 					<svg viewBox="0 0 24 24" class="social-link-icon">
 						<use href="{{"icons/icons.svg" | absURL}}#linkedin"/>
 					</svg>
