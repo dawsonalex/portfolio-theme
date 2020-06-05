@@ -52,10 +52,14 @@
 		{{ end }}
 	</header>
 	<main class="center-column">
-		<h2 class="light section-heading">Posts</h2>
-		<section id="posts">{{ partial "RenderFirstTenPosts" . }}</section>
+		<section id="posts">
+			<h2 class="light section-heading">Posts</h2>
+			{{ partial "RenderFirstTenPosts" . }}
+		</section>
 		
-		<h2 class="light section-heading">Projects</h2>
-		<section id="projects">{{ partial "RenderTopProjects" . }}</section>
+		<section id="projects">
+			<h2 class="light section-heading">Projects</h2>
+			{{ partial "RenderTopProjects" . }}
+		</section>
 	</main>
 {{- end -}}
