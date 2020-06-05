@@ -5,6 +5,7 @@
 	
 	<link rel="stylesheet" href="{{"css/style.css" | absURL}}" />
 	{{ partial "custom_head" . }}
+	{{ partial "custom_favicon" . }}
 
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
 </head>
