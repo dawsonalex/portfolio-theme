@@ -1,0 +1,21 @@
+<div class="brand-container">
+    {{ with $.Site.Params.author }}
+        <h1>{{ . }}</h1>
+    {{ else }}
+        <h1>{{ $.Site.Params.title }}</h1>
+    {{ end }}
+    {{ with $.Site.Params.subtitle}}
+        <span class="header-lead">{{.}}</span>
+    {{ end }}
+    <nav class="social-nav">
+        {{ with $.Site.Params.contact_links }}
+            {{ range . }}
+            <a href="{{ .link }}" class="social-link">
+                <svg viewBox="0 0 24 24" class="social-link-icon">
+                    <use href="{{"icons/icons.svg" | absURL}}#{{.icon}}"/>
+                </svg>
+            </a>
+            {{ end }}
+        {{ end }}
+    </nav>
+</div>

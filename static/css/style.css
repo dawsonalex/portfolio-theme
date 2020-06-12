@@ -215,29 +215,26 @@ p {
 }
 
 .brand-container h1 {
+	max-width: 6rem;
 	margin: 0;
 }
 
-.intro {
+.header-nav {
 	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: center;
-	max-width: 800px;
-	flex-wrap: wrap;
 	margin: 0;
 	margin-top: 1rem;
 }
 
-.intro-text {
-	text-align: center;
-
-	font-family: 'lora', monospace, sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 22px;
-	line-height: 1.5em;
-
-	flex: 100%;
+.header-link {
+	font-size: 2rem;
+	line-height: 2rem;
+	flex-shrink: 0;
+	margin: 2rem;
 }
 
 #posts {
@@ -418,9 +415,10 @@ a.social-link:visited {
 		padding: 0 4rem;
 	}
 
-	.intro {
+	.header-nav {
 		margin:0;
 		margin-left: 2rem;
+		flex-direction: row;
 	}
 
 	.intro-text {

@@ -1,0 +1,22 @@
+{{ if .Site.Menus.header }}
+<nav class="header-nav">
+    <svg viewBox="0 0 39 141" class="bracket">
+        <use href="{{"svg/brackets.svg" | absURL}}#open-bracket"/>
+    </svg>
+    <svg viewBox="0 0 141 39" class="bracket-horizontal">
+        <use href="{{"svg/brackets.svg" | absURL}}#open-bracket-horizontal"/>
+    </svg>
+
+
+    {{ range .Site.Menus.header }}
+        <a class="header-link" href="{{.URL}}">{{.Name}}</a>
+    {{ end }}
+
+    <svg viewBox="0 0 141 39" class="bracket-horizontal">
+        <use href="{{"svg/brackets.svg" | absURL}}#close-bracket-horizontal"/>
+    </svg>
+    <svg viewBox="0 0 39 141" class="bracket">
+        <use href="{{"svg/brackets.svg" | absURL}}#close-bracket"/>
+    </svg>
+</nav>
+{{ end }}
