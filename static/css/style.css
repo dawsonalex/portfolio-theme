@@ -221,6 +221,14 @@ p {
 
 .header-nav {
 	display: none;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	z-index: 10;
+
 	flex-wrap: wrap;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -228,6 +236,8 @@ p {
 	justify-content: center;
 	margin: 0;
 	margin-top: 1rem;
+
+	background: var(--color-background);
 }
 
 .header-link {
@@ -238,7 +248,7 @@ p {
 }
 
 #posts {
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
 .empty-placeholder {
@@ -326,8 +336,7 @@ p {
 .bracket-horizontal {
 	color: var(--font-family);
 	display: block;
-	height: 5%;
-	min-height: 39px;
+	width: 50%;
 }
 
 .social-icons {
@@ -355,6 +364,10 @@ p {
 	background-color: transparent;
 	border: 1px solid transparent;
 	border-radius: .25rem;
+}
+
+#menu-open {
+	z-index: 5;
 }
 
 .social-link-icon {
@@ -418,8 +431,20 @@ a.social-link:visited {
 	display: block;
 }
 
+.d-none {
+	display: none;
+}
+
+.d-flex {
+	display: flex;
+}
+
 .d-inline-block {
 	display: inline-block;
+}
+
+.overflow-hidden {
+	overflow: hidden;
 }
 
 /** || Media breakpoints */
@@ -438,10 +463,14 @@ a.social-link:visited {
 		margin:0;
 		margin-left: 2rem;
 		flex-direction: row;
+
+		position: relative;
+		min-height: auto;
+		min-width: auto;
 	}
 
-	.intro-text {
-		flex: 1;
+	.menu-toggler {
+		display: none;
 	}
 
 	.bracket-horizontal {
