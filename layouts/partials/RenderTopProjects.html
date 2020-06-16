@@ -10,7 +10,7 @@
 {{ end }}
 
 {{ if gt (len $repos) 0}}
-    {{ range first 3 $repos }}
+    {{ range first 4 $repos }}
         {{ partial "project" .}}
     {{ end }}
 {{ else }}
