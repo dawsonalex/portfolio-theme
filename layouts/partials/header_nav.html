@@ -1,5 +1,5 @@
 {{ if .Site.Menus.header }}
-<nav id="main-menu" class="header-nav">
+<nav id="main-menu" class="header-nav header-nav-closed">
     <svg viewBox="0 0 39 141" class="bracket">
         <use href="{{"svg/brackets.svg" | absURL}}#open-bracket"/>
     </svg>
@@ -17,17 +17,18 @@
     </svg>
     <svg viewBox="0 0 39 141" class="bracket">
         <use href="{{"svg/brackets.svg" | absURL}}#close-bracket"/>
-		</svg>
-		
-		<button id="menu-close" class="menu-toggler" aria-label="Close Menu">
-			<svg viewBox="0 0 24 24" class="menu-icon">
-				<use href="{{"icons/icons.svg" | absURL}}#x"/>
-			</svg>
-		</button>
+    </svg>
+    
+    <button id="menu-close" class="menu-toggler" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" class="menu-icon">
+            <use href="{{"icons/icons.svg" | absURL}}#x"/>
+        </svg>
+    </button>
 </nav>
 <button id="menu-open" class="menu-toggler" aria-label="Open Menu">
 	<svg viewBox="0 0 24 24" class="menu-icon">
 		<use href="{{"icons/icons.svg" | absURL}}#menu"/>
 	</svg>
 </button>
+<div class="header-nav-overlay"></div>
 {{ end }}
