@@ -1,3 +1,15 @@
 {{- define "main" -}}
-<h1>Post</h1>
+<main  class="center-column">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <span class="post-author-label">{{ with .Params.Author }}{{ . }}&nbsp;-&nbsp;{{ end }}{{ dateFormat "2nd January, 2006" .Date }}</span>
+    <div class="post-tags">
+        {{ with .Params.tags  }}
+            {{ range . }}
+                <a class="tag-label" href="{{ "tags/" | absURL }}{{ . | urlize }}">#{{ . }}</a>
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="post-header-divider"></div>
+    {{ .Content }}
+</main>
 {{- end -}}
