@@ -1,7 +1,13 @@
 <div class="post">
     <h2>{{ .Title }}</h2>
-    <p>{{ .Summary}}</p>
-		<span class="post-length-label">{{ partial "GetReadLength" . }} min read</span>
-		<span class="post-date-label">{{dateFormat "Mon, 1st Jan, 2020" .Date}}</span>
-		<a href="{{ .Permalink }}">Read More</a>
+	<span class="post-length-label">{{ partial "GetReadLength" . }} min read</span>
+	<span class="post-date-label">{{dateFormat "Mon, 2nd Jan, 2006" .Date}}</span>
+	<a href="{{ .Permalink }}">Read More</a>
+	<div class="post-tags">
+	{{ with .Params.tags  }}
+		{{ range . }}
+			<a class="tag-label" href="{{ "tags/" | absURL }}{{ . | urlize }}">#{{ . }}</a>
+		{{ end }}
+	{{ end }}
+	</div>
 </div>
