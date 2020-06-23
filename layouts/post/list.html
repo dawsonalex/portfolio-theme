@@ -3,8 +3,13 @@
         <section id="posts">
             <h2 class="light section-heading">All Posts</h2>
         </section>
-        {{ range .Pages }}
-            {{ .Render "li" }}
+        {{ if gt (len .Pages) 0 }}
+            {{ range .Pages }}
+                {{ .Render "li" }}
+            {{ end }}
+        {{ else }}
+            {{ .Scratch.Set "placeholder" "No Posts to Show :(" }}
+            {{ partial "emptyPlaceHolder" . }}
         {{ end }}
     </main>
 {{- end -}}
