@@ -1,8 +1,8 @@
 <div class="brand-container">
     {{ with $.Site.Params.author }}
-        <h1>{{ . }}</h1>
+        <a href="/"><h1 class="header-title">{{ . }}</h1></a>
     {{ else }}
-        <h1>{{ $.Site.Params.title }}</h1>
+        <a href="/"><h1 class="header-title">{{ $.Site.Params.title }}</h1></a>
     {{ end }}
     {{ with $.Site.Params.subtitle}}
         <span class="header-lead">{{.}}</span>
