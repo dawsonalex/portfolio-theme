@@ -2,8 +2,14 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	{{/* RSS Feed link generation */}}
+	{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
 	
 	<link rel="stylesheet" href="{{"css/style.css" | absURL}}" />
+	<link rel="stylesheet" href="{{"css/md.css" | absURL}}" />
 	{{ partial "custom_head" . }}
 	{{ partial "custom_favicon" . }}
 
