@@ -7,6 +7,15 @@
 	{{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
+
+	<link rel="preload" href="../fonts/lora/lora-v16-latin-regular.woff2" as="font">
+	<link rel="preload" href="../fonts/lora/lora-v16-latin-700.woff2" as="font">
+	<link rel="preload" href="../fonts/lora/lora-v16-latin-italic.woff2" as="font">
+	<link rel="preload" href="../fonts/ubuntu/ubuntu-v14-latin-300.woff2" as="font">
+	<link rel="preload" href="../fonts/ubuntu/ubuntu-v14-latin-regular.woff2" as="font">
+	<link rel="preload" href="../fonts/ubuntu/ubuntu-v14-latin-italic.woff2" as="font">
+	<link rel="preload" href="../fonts/ubuntu/ubuntu-v14-latin-500.woff2" as="font">
+	<link rel="preload" href="../fonts/ubuntu/ubuntu-v14-latin-700.woff2" as="font">
 	
 	<link rel="stylesheet" href="{{"css/style.css" | absURL}}" />
 	<link rel="stylesheet" href="{{"css/md.css" | absURL}}" />
