@@ -7,6 +7,9 @@
  * --large-device-breakpoint: 992px;
  */
 
+ /** || Imports */
+ @import url('fonts.css');
+
  /** || Variables */
 
 html {
@@ -24,6 +27,11 @@ html {
 	--color-primary: var(--green);
 	--color-primary-medium: var(--medium-green);
 	--color-primary-light: var(--light-green);
+
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-bold: 700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,33 +66,6 @@ html[data-theme='light'] {
 	--color-primary-light: var(--light-green);
 }
 
-/* || fonts */
-
-@font-face {
-    font-family: lora;
-    src: url(../font/Lora/Lora-VariableFont_wght.ttf);
-}
-
-@font-face {
-   font-family: ubuntu-light;
-   src: url(../font/Ubuntu/Ubuntu-Light.ttf);
-}
-
-@font-face {
-   font-family: ubuntu-medium;
-   src: url(../font/Ubuntu/Ubuntu-Medium.ttf);
-}
-
-@font-face {
-   font-family: ubuntu-regular;
-   src: url(../font/Ubuntu/Ubuntu-Regular.ttf);
-}
-
-@font-face {
-   font-family: ubuntu-bold;
-   src: url(../font/Ubuntu/Ubuntu-Bold.ttf);
-}
-
 /* || base styles */
 
 * {
@@ -99,18 +80,21 @@ body {
 }
 
 h1 {
-	font-family: 'ubuntu-bold', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
+	font-weight: var(--fw-bold);
 	font-size: 64px;
 	line-height: 74px;
 	color: var(--font-family);
 }
 
 h1.medium {
-	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
+	font-weight: medium;
 }
 
 h2 {
-	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
+	font-weight: var(--fw-medium);
 	font-size: 42px;
 	line-height: 48px;
 	font-style: normal;
@@ -119,25 +103,29 @@ h2 {
 }
 
 h2.light {
-	font-family: 'ubuntu-light', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
+	font-weight: var(--fw-light);
 }
 
 h3 {
-	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
+	font-weight: var(--fw-medium);
 	font-size: 26px;
 	line-height: 40px;
 	color: var(--font-family);
 }
 
 h4 {
-	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
+	font-weight: var(--fw-medium);
 	font-size: 18px;
 	line-height: 24px;
 	color: var(--font-family);
 }
 
 .text-large-light {
-	font-family: 'ubuntu-light', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
+	font-weight: var(--fw-light);
 	font-size: 42px;
 	line-height: 48px;
 	font-style: normal;
@@ -160,7 +148,7 @@ a:hover {
 p {
 	font-family: 'lora', monospace, sans-serif;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: var(--fw-regular);
 	font-size: 18px;
 	line-height: 1.3em;
 	color: var(--font-family);
@@ -189,9 +177,9 @@ p {
 }
 
 .header-title {
-	font-family: 'ubuntu-bold', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: var(--fw-bold);
 	font-size: 2rem;
 	line-height: 2.25rem;
 
@@ -202,9 +190,9 @@ p {
 }
 
 .header-lead {
-	font-family: 'ubuntu-regular', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: var(--fw-regular);
 	font-size: 1.25rem;
 	line-height: 140%;
 
@@ -281,7 +269,8 @@ p {
 	margin: 3rem 0;
 	font-family: 'lora', monospace, sans-serif;
 
-	font-family: 'ubuntu-medium', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
+	font-weight: var(--fw-medium);
 	font-size: 26px;
 	line-height: 40px;
 	color: var(--font-family);
@@ -418,9 +407,9 @@ a.social-link:visited {
 .article-title {
 	display: inline-block;
 
-	font-family: 'ubuntu-bold', monospace, sans-serif;
+	font-family: 'ubuntu', monospace, sans-serif;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: var(--fw-bold);
 	font-size: 34px;
 	line-height: 39%;
 
