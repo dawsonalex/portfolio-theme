@@ -22,10 +22,9 @@
 	<link rel="preload" href="../fonts/ubuntu/ubuntu-v14-latin-500.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="../fonts/ubuntu/ubuntu-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 	
-	<link rel="stylesheet" href="{{"css/style.css" | absURL}}" />
-	<link rel="stylesheet" href="{{"css/md.css" | absURL}}" />
+	{{ partialCached "style.html" . }}
 	{{ partial "custom_head" . }}
 	{{ partial "custom_favicon" . }}
 
-  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+  <title>{{ if not .IsHome }}{{ .Title }} / {{ end }}{{ site.Title }}</title>
 </head>
