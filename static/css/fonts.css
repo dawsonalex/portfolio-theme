@@ -10,6 +10,7 @@
   font-family: 'Lora';
   font-style: normal;
   font-weight: 400;
+	font-display: fallback;
   src: url('../fonts/lora/lora/lora-v16-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/lora/lora-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -23,6 +24,7 @@
   font-family: 'Lora';
   font-style: normal;
   font-weight: 700;
+	font-display: fallback;
   src: url('../fonts/lora/lora-v16-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/lora/lora-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -36,6 +38,7 @@
   font-family: 'Lora';
   font-style: italic;
   font-weight: 400;
+	font-display: fallback;
   src: url('../fonts/lora/lora-v16-latin-italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/lora/lora-v16-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -52,6 +55,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 300;
+	font-display: fallback;
   src: url('../fonts/ubuntu/ubuntu-v14-latin-300.eot'); /* IE9 Compat Modes */
   src: local('Ubuntu Light'), local('Ubuntu-Light'),
        url('../fonts/ubuntu/ubuntu-v14-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -65,6 +69,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
+	font-display: fallback;
   src: url('../fonts/ubuntu/ubuntu-v14-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
        url('../fonts/ubuntu/ubuntu-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -78,6 +83,7 @@
   font-family: 'Ubuntu';
   font-style: italic;
   font-weight: 400;
+	font-display: fallback;
   src: url('../fonts/ubuntu/ubuntu-v14-latin-italic.eot'); /* IE9 Compat Modes */
   src: local('Ubuntu Italic'), local('Ubuntu-Italic'),
        url('../fonts/ubuntu/ubuntu-v14-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -91,6 +97,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 500;
+	font-display: fallback;
   src: url('../fonts/ubuntu/ubuntu-v14-latin-500.eot'); /* IE9 Compat Modes */
   src: local('Ubuntu Medium'), local('Ubuntu-Medium'),
        url('../fonts/ubuntu/ubuntu-v14-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -104,6 +111,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
+	font-display: fallback;
   src: url('../fonts/ubuntu/ubuntu-v14-latin-700.eot'); /* IE9 Compat Modes */
   src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
        url('../fonts/ubuntu/ubuntu-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
