@@ -155,7 +155,6 @@ p {
 	padding: 2rem;
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
 }
 
 .social-nav {
@@ -489,6 +488,7 @@ a.social-link:visited {
 	.homepage-header {
 		justify-content: space-around;
 		padding: 4rem;
+		flex-wrap: nowrap;
 	}
 
 	main {
@@ -519,6 +519,7 @@ a.social-link:visited {
 
 		transform: translateX(0);
 		transition: none;
+		flex: 0;
 	}
 
 	.menu-toggler {
