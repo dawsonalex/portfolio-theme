@@ -32,11 +32,16 @@ blockquote::after {
     color: var(--font-family-secondary);
 }
 
+ul {
+    color: var(--font-family);
+}
+
 /* || Code Highlight */
 
 .highlight > pre {
     padding: 1rem;
     border-left: 8px solid var(--color-primary);
+    overflow-x: auto;
 }
 
 /** || media */
