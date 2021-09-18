@@ -43,6 +43,26 @@ ul {
     padding: 1rem;
     border-left: 8px solid var(--color-primary);
     overflow-x: auto;
+    background: #272822;
+}
+
+pre > code {
+    background: #272822;
+    padding: initial;
+}
+
+/* Individual code point */
+
+code {
+    font-family: 'ubuntu', monospace, sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--font-family);
+    background: #828282;
+    padding: 0.15rem 0.3rem;
+    border-radius: 4px;
+
 }
 
 /** || media */
